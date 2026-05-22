@@ -1,0 +1,79 @@
+/* Enhanced Responsive Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1e2a44 !important;
+    padding: 18px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 8px;
+    padding: 8px 12px;
+}
+
+.bracket, .text-warning {
+    color: #ffd700;
+}
+
+/* Make arrows smaller on mobile */
+@media (max-width: 992px) {
+    .text-warning {
+        display: none;
+    }
+    
+    .nav-link {
+        text-align: center;
+        margin: 6px 0;
+        font-size: 1.1rem;
+    }
+    
+    .btn-warning {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+/* Hero Section Responsive */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .display-3 {
+        font-size: 2.4rem;
+    }
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+/* Cards */
+.card {
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}

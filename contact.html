@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Reggie & Partners</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .animate-on-scroll { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1e2a44;">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">⚖️ Reggie & Partners</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portal.html">Client Portal</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-warning ms-lg-4">📞 Book Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <h1 class="text-center mb-5 animate-on-scroll">Get In Touch</h1>
+        <div class="row">
+            <div class="col-lg-6 animate-on-scroll">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label>Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label>Phone Number</label>
+                        <input type="tel" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                </form>
+            </div>
+            <div class="col-lg-6 animate-on-scroll">
+                <h4>Contact Information</h4>
+                <p><strong>Address:</strong> Plot 123, Independence Avenue, Gaborone, Botswana</p>
+                <p><strong>Phone:</strong> +267 71 234 567</p>
+                <p><strong>Email:</strong> info@reggielaw.co.bw</p>
+                <p><strong>Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-5 text-center">
+        <p>&copy; 2026 Reggie & Partners Law Firm. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been sent.");
+            this.reset();
+        });
+
+        const observer = new IntersectionObserver((e) => e.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible')), {threshold: 0.2});
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
